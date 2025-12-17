@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Rahasia Anonim</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔐</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <div class="avatar">
+                <i class="fas fa-user-secret"></i>
+            </div>
+            <h1 class="username" id="username">@PesanRahasia</h1>
+            <p class="tagline">Kirimi saya pesan anonim! Identitas Anda 100% rahasia.</p>
+        </div>
+        
+        <div class="message-box">
+            <label class="message-label">
+                <i class="fas fa-edit"></i> Pesan Rahasia Anda
+            </label>
+            <textarea 
+                id="messageInput" 
+                class="message-input" 
+                placeholder="Ketik pesan rahasia Anda di sini... Pesan akan langsung dikirim ke WhatsApp saya tanpa menyimpan identitas Anda."
+                maxlength="500"></textarea>
+            <div class="char-counter">
+                <span id="charCount">0</span>/500 karakter
+            </div>
+        </div>
+        
+        <button id="sendButton" class="send-button">
+            <i class="fab fa-whatsapp"></i> Kirim Pesan ke WhatsApp
+        </button>
+        
+        <div class="warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            Pesan akan dikirim langsung ke WhatsApp penerima tanpa menyimpan data pengirim
+        </div>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>100% Anonim</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-bolt"></i>
+                <span>Langsung ke WA</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-history"></i>
+                <span>Tidak Disimpan</span>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-user-ninja"></i> Pengirim Tidak Diketahui
+            </div>
+            <div class="feature">
+                <i class="fas fa-mobile-alt"></i> Langsung ke WhatsApp
+            </div>
+            <div class="feature">
+                <i class="fas fa-globe"></i> Responsif
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon success">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Pesan Terkirim!</h2>
+            <p id="modalMessage">Pesan Anda telah dikirim ke WhatsApp penerima.</p>
+            <p class="modal-note">Identitas Anda tetap rahasia.</p>
+            <button id="closeModal" class="modal-button">Kirim Pesan Lain</button>
+        </div>
+    </div>
+    
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon error">
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <h2>Terjadi Kesalahan</h2>
+            <p id="errorMessage">Pesan tidak dapat dikirim. Silakan coba lagi.</p>
+            <button id="closeErrorModal" class="modal-button">Tutup</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Dibuat dengan <i class="fas fa-heart"></i> untuk berbagi pesan rahasia</p>
+        <p class="footer-note">
+            <i class="fas fa-info-circle"></i> 
+            Sistem ini tidak menyimpan data pengirim. Pesan langsung dikirim ke WhatsApp.
+        </p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
